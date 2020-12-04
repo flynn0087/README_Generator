@@ -39,4 +39,19 @@ function userInput = () =>
                 "Other",
             ],
         },
+        {
+            type: "input",
+            name: "contribution",
+            message: "Are there any contributors or websites that need to be acknowledged?",
+        },
+        {
+            type: "input",
+            name: "test",
+            message: "Are there any tests included?",
+        },
+        {
+            type: "input",
+            name: "issues",
+            message: "How should issues with the project be submitted?",
+        },
     ]);
