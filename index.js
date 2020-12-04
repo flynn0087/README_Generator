@@ -62,8 +62,8 @@ const userInput = () =>
 ]);
 
 const generateReadme = (response) =>
-`
-# ${response.title} ![License](https://img.shields.io/badge/License-${response.license}-green.svg "License Badge")
+`![License](https://img.shields.io/badge/License-${response.license}-green.svg "License Badge")
+# ${response.title} 
     
 # Table of Contents
 - [Description](#description)
