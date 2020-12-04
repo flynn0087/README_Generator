@@ -63,5 +63,38 @@ const userInput = () =>
 
 const generateReadme = (response) =>
 `
+# ${response.title} ![License](https://img.shields.io/badge/License-${response.license}-blue.svg "License Badge")
+    
+# Table of Contens
+    - [Description](##description)
+    - [Installation](##installation)
+    - [Usage](##usage)
+    - [License](##license)
+    - [Contributions](##contributions)
+    - [Tests](#tests)
+    - [Questions](#questions)
+        
+## Description:
+    ${response.description}
+            
+## Installation:
+    ${response.installation}
+        
+## Usage:
+    ${response.usage}
+
+## License:
+    ${response.license}
+    
+## Contributions:
+    ${response.contributions}
+
+## Tests:
+    ${response.tests}
+
+## Questions:
+    Questions about the project can either be directed to:
+    [GitHub Profile](https://github.com/${response.username})
+    ${response.email}
 `;
 
