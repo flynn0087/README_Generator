@@ -2,9 +2,10 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
-// const writeFileAsync = util.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
-inquirer.prompt([
+const userInput = () =>
+    inquirer.prompt([
     {
         type: "input",
         name: "title",
@@ -40,18 +41,13 @@ inquirer.prompt([
     },
     {
         type: "input",
-        name: "contribution",
+        name: "contributions",
         message: "Are there any contributors or websites that need to be acknowledged?",
     },
     {
         type: "input",
-        name: "test",
+        name: "tests",
         message: "Are there any tests included?",
-    },
-    {
-        type: "input",
-        name: "issues",
-        message: "How should issues with the project be submitted?",
     },
     {
         type: "input",
@@ -63,7 +59,9 @@ inquirer.prompt([
         name: "email",
         message: "What is the contact email for the project?",
     },
-])
-.then((response) =>
-    console.log(response)
-)
+]);
+
+const generateReadme = (response) =>
+`
+`;
+
