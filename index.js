@@ -65,7 +65,7 @@ const generateReadme = (response) =>
 `
 # ${response.title} ![License](https://img.shields.io/badge/License-${response.license}-blue.svg "License Badge")
     
-# Table of Contens
+# Table of Contents
     - [Description](##description)
     - [Installation](##installation)
     - [Usage](##usage)
@@ -98,3 +98,7 @@ const generateReadme = (response) =>
     ${response.email}
 `;
 
+userInput()
+    .then((response) => writeFileAsync("README.md", generateReadme(response)))
+    .then(() => console.log("Sucessfully wrote to README.md"))
+    .catch((err) => console.error(err));
