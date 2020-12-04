@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+
 const writeFileAsync = util.promisify(fs.writeFile);
 
 function userInput = () =>
@@ -14,5 +15,15 @@ function userInput = () =>
             type: "input",
             name: "description",
             message: "What is the description of the project?",
+        },
+        {
+            type: "input",
+            name: "installation",
+            message: "What installation steps are needed to make the project usable?",
+        },
+        {
+            type: "input",
+            name: "usage",
+            message: "What is the intended use of the project?",
         },
     ]);
