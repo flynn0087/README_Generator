@@ -26,4 +26,17 @@ function userInput = () =>
             name: "usage",
             message: "What is the intended use of the project?",
         },
+        {
+            type: "list",
+            name: "license",
+            message: "What license does the project operate under?",
+            choices: [
+                "MIT",
+                "GPLv2",
+                "Apache",
+                "GPLv3",
+                "BSD 3=clause",
+                "Other",
+            ],
+        },
     ]);
