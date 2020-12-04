@@ -63,16 +63,16 @@ const userInput = () =>
 
 const generateReadme = (response) =>
 `
-# ${response.title} ![License](https://img.shields.io/badge/License-${response.license}-blue.svg "License Badge")
+# ${response.title} ![License](https://img.shields.io/badge/License-${response.license}-green.svg "License Badge")
     
 # Table of Contents
-    - [Description](##description)
-    - [Installation](##installation)
-    - [Usage](##usage)
-    - [License](##license)
-    - [Contributions](##contributions)
-    - [Tests](#tests)
-    - [Questions](#questions)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributions](#contributions)
+- [Tests](#tests)
+- [Questions](#questions)
         
 ## Description:
     ${response.description}
@@ -93,9 +93,9 @@ const generateReadme = (response) =>
     ${response.tests}
 
 ## Questions:
-    Questions about the project can either be directed to:
-    [GitHub Profile](https://github.com/${response.username})
-    ${response.email}
+Questions about the project can either be directed to:
+[GitHub Profile](https://github.com/${response.githubUser})
+Email: ${response.email}
 `;
 
 userInput()
