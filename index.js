@@ -1,9 +1,12 @@
+//these are the required modules to run and write via command prompts
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
+//this makes my function return a promise
 const writeFileAsync = util.promisify(fs.writeFile);
 
+//these are the prompts to the user using inquirer
 const userInput = () =>
     inquirer.prompt([
     {
@@ -61,6 +64,7 @@ const userInput = () =>
     },
 ]);
 
+//this is the actual generation of the readme file, including the section breakdowns
 const generateReadme = (response) =>
 `![License](https://img.shields.io/badge/License-${response.license}-green.svg "License Badge")
 # ${response.title} 
@@ -98,6 +102,7 @@ Questions about the project can either be directed to:
 Email: ${response.email}
 `;
 
+//this section actually writes the readme file and has a sucess or error response
 userInput()
     .then((response) => writeFileAsync("README.md", generateReadme(response)))
     .then(() => console.log("Sucessfully wrote to README.md"))
