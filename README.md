@@ -24,7 +24,7 @@
 
     This project is for anyone who needs to make a professional quality README. It can be accessed by the terminal in VS Code.
 
-[Instructional Video](usage_instrucional_gif.gif)
+![Instructional Video](instructional.gif)
 
 ## License:
 
